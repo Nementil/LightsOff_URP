@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6541816467850068122}
   - component: {fileID: -5032144897952377756}
   - component: {fileID: 8261556823150346434}
+  - component: {fileID: 1764211116845727822}
   - component: {fileID: 4458920025534798131}
   - component: {fileID: 8717938970011542421}
   - component: {fileID: 369666227060380620}
-  - component: {fileID: 1629054906915661259}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -149,6 +149,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1764211116845727822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174025673100011439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b1c4f3c07239f4cac1e50a5129f4ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  rb: {fileID: 0}
+  playerInput: {fileID: 0}
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 456108c6-d4be-47af-9984-09021547ca1d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &4458920025534798131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,9 +185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f299c7db2f99241ad684c801a78eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mousePos: {x: 0, y: 0}
-  aim_local: {x: 0, y: 0}
-  rb: {fileID: 0}
+  inputManager: {fileID: 0}
+  playerInput: {fileID: 0}
+  aimAction:
+    m_Name: Aim
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 27f38bba-e4d8-4670-b329-e9a902b9e009
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!212 &8717938970011542421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,20 +293,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.9375}
   m_EdgeRadius: 0
---- !u!114 &1629054906915661259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3174025673100011439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db49181d68619b4998c3ec178b2a012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 5
-  maxAcceleration: 60
 --- !u!1 &3838380942117848409
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +361,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 55.960045
-  m_PointLightOuterAngle: 57.058105
+  m_PointLightInnerAngle: 90
+  m_PointLightOuterAngle: 90
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 4
   m_ShapeLightParametricSides: 5

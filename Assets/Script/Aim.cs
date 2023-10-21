@@ -1,23 +1,23 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class Aim : MonoBehaviour
 {
-    public Vector2 mousePos;
-    public Vector2 aim_local;
-    [SerializeField] private Camera cam;
-    [SerializeField] public Rigidbody2D rb;
+    public GameObject inputManager;
+    [SerializeField] public PlayerActions playerActions;//see inputactions
+    [SerializeField] private PlayerInput playerInput;//component
+    [SerializeField] private InputAction aimAction;//action in map
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        playerActions = new PlayerActions();
+        playerInput = inputManager.GetComponent<PlayerInput>();
+        playerActions.Keyboard.Enable();
+        aimAction = playerInput.actions["Aim"];
         
     }
-    
     public void OnAiming(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -25,13 +25,4 @@ public class Aim : MonoBehaviour
 
         }
     }
-    void Update()
-    {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        //shoot = playerInputAction.Player.Shoot.ReadValue<float>();
-        Vector2 lookDir = mousePos - rb.position;
-        var angle = Mathf.Atan2(lookDir.y ,lookDir.x )* Mathf.Rad2Deg-90f;
-        rb.rotation = angle;
-    }
-       
 }
