@@ -8,10 +8,12 @@ public class Aim : MonoBehaviour
     [SerializeField] private Camera cam;
     Vector2 mousePos;
     Rigidbody2D rb;
-
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
-
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     private void FixedUpdate()
