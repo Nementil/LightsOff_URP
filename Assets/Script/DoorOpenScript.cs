@@ -5,22 +5,22 @@ using UnityEngine;
 public class DoorOpenScript : MonoBehaviour
 {
 
-    public class DoorAnimatorParamName = "DoorOpen";
+ //   public class DoorAnimatorParamName = "DoorOpen";
     
         
-    private void OnAnimatorIK(int layerIndex)
+  //  private void OnAnimatorIK(int layerIndex)
     
-        Animator animator; 
+     //   Animator animator; 
     
 
          void Start()
     {
-        Animator animator = GetComponent<Animator>();
+      //  Animator animator = GetComponent<Animator>();
     }
 
     
     void Update()
     {
-      if(dete)  
+     // if(dete)  
     }
 }

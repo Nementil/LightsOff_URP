@@ -15,9 +15,12 @@ public class PlayerMovement2 : MonoBehaviour
 
     Rigidbody2D body;
 
+    Animator animator;
+
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -30,7 +33,7 @@ public class PlayerMovement2 : MonoBehaviour
         direction = Vector2.ClampMagnitude(direction, 1f);
 
         desiredVelocity = new Vector3(direction.x,direction.y, 0f) * maxSpeed;
-
+        animator.SetBool("IsWalking", transform.hasChanged);
     }
 
     void LateUpdate()

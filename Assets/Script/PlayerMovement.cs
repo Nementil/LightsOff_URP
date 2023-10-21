@@ -7,7 +7,8 @@ using UnityEngine.InputSystem.Interactions;//later
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject inputManager;
-    public Rigidbody2D rb ;
+    public Rigidbody2D rb;
+    public Animator animator;
 
     [SerializeField] public PlayerActions playerActions;//see inputactions
     [SerializeField] private PlayerInput playerInput;//component
