@@ -1,28 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 
 public class Aim : MonoBehaviour
 {
-    public GameObject inputManager;
-    [SerializeField] public PlayerActions playerActions;//see inputactions
-    [SerializeField] private PlayerInput playerInput;//component
-    [SerializeField] private InputAction aimAction;//action in map
+    [SerializeField] private Camera cam;
+    Vector2 mousePos;
+    Rigidbody2D rb;
 
-    void Awake()
+    private void Update()
     {
-        playerActions = new PlayerActions();
-        playerInput = inputManager.GetComponent<PlayerInput>();
-        playerActions.Keyboard.Enable();
-        aimAction = playerInput.actions["Aim"];
-        
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
-    public void OnAiming(InputAction.CallbackContext context)
+    private void FixedUpdate()
     {
-        if (context.performed)
-        {
-
-        }
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }

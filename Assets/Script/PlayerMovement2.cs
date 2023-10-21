@@ -25,7 +25,7 @@ public class PlayerMovement2 : MonoBehaviour
         direction.x = Input.GetAxis("Horizontal"); //has value 1 or -1
         direction.y = Input.GetAxis("Vertical"); //has value 1 or -1
 
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
         direction = Vector2.ClampMagnitude(direction, 1f);
 
