@@ -139,10 +139,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1002982982}
-    - target: {fileID: 8261556823150346434, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 9218774544286218305, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.78
@@ -10267,7 +10263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.375, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057815399
 GameObject:
   m_ObjectHideFlags: 0
