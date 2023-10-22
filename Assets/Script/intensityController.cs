@@ -18,7 +18,7 @@ public class intensityController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Flash(float lum)
+    public void Flash(float lum)
     {
         light.intensity = Mathf.Clamp(lum,luminanceMin,luminanceMax);
         StartCoroutine(DimLight(lum));

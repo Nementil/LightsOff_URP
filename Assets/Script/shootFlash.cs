@@ -11,7 +11,6 @@ public class shootFlash : MonoBehaviour
 
     [SerializeField] float rangeLight = 5;
     [SerializeField] float angleLight = 90;
-    [SerializeField] GameObject Lamp;
 
     [SerializeField, Range(0f, 10f)] private float growthRate = 1.0f;
     [SerializeField, Range(0f, 100f)] private float LuminanceMax = 10.0f;
@@ -20,9 +19,8 @@ public class shootFlash : MonoBehaviour
 
     private void Awake()
     {
-        Lamp = transform.GetChild(0).gameObject;
-        angleLight = Lamp.GetComponent<Light2D>().pointLightOuterAngle;
-        rangeLight = Lamp.GetComponent<Light2D>().pointLightOuterRadius;
+        angleLight = transform.GetComponent<Light2D>().pointLightOuterAngle;
+        rangeLight = transform.GetComponent<Light2D>().pointLightOuterRadius;
     }
 
     private void Update()
@@ -38,9 +36,12 @@ public class shootFlash : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             StopCoroutine(GrowLuminance());
+            GetComponent<intensityController>().Flash(Luminance);
             isGrowing = false;
             Luminance = 0;
             ShootRaycasts();
+            
+
         }
     }
  
@@ -80,10 +81,10 @@ public class shootFlash : MonoBehaviour
         {
             Quaternion rotation = Quaternion.Euler(0, 0, angle + transform.rotation.eulerAngles.z);
             Vector3 direction = rotation * Vector3.up;
-            Ray ray = new(Lamp.transform.position, direction);
+            Ray ray = new(transform.position, direction);
             RaycastHit2D[] hit = Physics2D.RaycastAll(ray.origin, direction, rangeLight);
 
-            Debug.DrawRay(Lamp.transform.position, direction * rangeLight, Color.red);
+            Debug.DrawRay(transform.position, direction * rangeLight, Color.red);
             for (var i = 0; i < hit.Length; i++)
             {
                 if(hit[i].collider.gameObject.CompareTag("Wall"))
@@ -96,6 +97,8 @@ public class shootFlash : MonoBehaviour
                     //GameManager.Instance.enemiesKilled++;
                     Destroy(hit[i].collider.gameObject);
                 }
+
+                Debug.DrawRay(transform.position, direction * 10, Color.red, 0.1f);
             }
         }
     }
