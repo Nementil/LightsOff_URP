@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance=> _instance;
     public GameManagerState State;
     public int enemiesKilled;
+    public int enemiesInstantiated;
     private int timeInterval;
     public bool doorUnlocked =false;
+    [SerializeField] public int maxEnemies;
     [SerializeField] private GameObject player;
 
     private void Awake() 

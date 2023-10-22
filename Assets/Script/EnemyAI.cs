@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] SO_Enemy1 enemy;
+    [SerializeField] public SO_Enemy1 enemy;
     [SerializeField] AI_State currentState;
     [SerializeField] NavMeshAgent agent;
     private Vector3 target;

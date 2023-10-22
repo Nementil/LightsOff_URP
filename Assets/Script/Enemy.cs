@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] SO_Enemy1 enemy;
-    [SerializeField] GameObject container;
+    [SerializeField] public SO_Enemy1 enemy;
+    [SerializeField] public GameObject container;
     private void Awake()
     {
         container = GameObject.FindWithTag("Instantiated Enemies");
