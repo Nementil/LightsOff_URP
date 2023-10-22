@@ -9,6 +9,7 @@ TagManager:
   - Instantiated Enemies
   - MonsterScream
   - Wall
+  - UIManager
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 

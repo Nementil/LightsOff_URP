@@ -12,6 +12,10 @@ public class Items : MonoBehaviour
             //GameObject player=collision.gameObject.tag=="Player";
             //player.GetComponent<Battery>().battery++;
             Debug.Log("Item Collided");
+            if(item.item.name=="Hearth")
+            {
+                collision.gameObject.GetComponent<PlayerHealth>().currentHealth++;
+            }
             Destroy(this.gameObject);
         }
     }
