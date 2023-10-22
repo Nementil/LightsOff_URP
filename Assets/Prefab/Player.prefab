@@ -308,6 +308,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2045549346861546109}
   - component: {fileID: 963828776507087847}
+  - component: {fileID: 3300446672088878696}
+  - component: {fileID: 6728878023453933402}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -380,3 +382,34 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &3300446672088878696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838380942117848409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67feed4c8ab8c55488b14cd2dc61e600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Luminance: 0
+  rangeLight: 5
+  angleLight: 90
+  growthRate: 1
+  LuminanceMax: 10
+--- !u!114 &6728878023453933402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838380942117848409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f374fac1040bc464ba0e53c898fb1016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luminanceMin: 1
+  dimRate: 1
