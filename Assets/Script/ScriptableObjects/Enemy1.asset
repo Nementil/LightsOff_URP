@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb78bd0053779a34e97751b26bcd4b92, type: 3}
   m_Name: Enemy1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300024, guid: c3a0ffcab94f86043aa02beca70d680b, type: 3}
   rangeLook: 15
   speed: 2
   treshold: 1
