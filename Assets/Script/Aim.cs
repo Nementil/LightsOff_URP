@@ -27,7 +27,7 @@ public class Aim : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
-        CheckEnemyInLight();
+        //CheckEnemyInLight();
 
         //Vector3 directionlooking= transform.rotation *new Vector3(0,1,0);
         //Debug.DrawRay(transform.position, directionlooking, Color.red);

@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class shootFlash : MonoBehaviour
 {
-    private float Luminance = 0;
+    public float Luminance = 0;
     private bool isGrowing = false;
+
+    [SerializeField] private Camera cam;
+    Vector2 mousePos;
+    Rigidbody2D rb;
+    [SerializeField] float rangeLight = 5;
+    [SerializeField] float angleLight = 90;
+    [SerializeField] GameObject Lamp;
+
 
     [SerializeField, Range(0f, 10f)] private float growthRate = 1.0f;
     [SerializeField, Range(0f, 100f)] private float LuminanceMax = 10.0f;
@@ -15,6 +23,7 @@ public class shootFlash : MonoBehaviour
 
     private void Update()
     {
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         // Check if the "Fire" button is pressed
         if (Input.GetButtonDown("Fire1"))
         {
@@ -31,9 +40,16 @@ public class shootFlash : MonoBehaviour
             ShootRaycasts();
         }
     }
+    private void FixedUpdate()
+    {
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
+    }
 
     private void ShootRaycasts()
     {
+        /*
         Vector3 forwardDirection = transform.up; // Use the object's forward direction based on rotation
 
         List<Vector3> raycastDirections = new List<Vector3>
@@ -62,6 +78,26 @@ public class shootFlash : MonoBehaviour
         Debug.Log("Shoot !");
 
         // Handle the hitEnemies list as needed (e.g., apply damage, destroy, etc.)
+        */
+        for (int angle = (int)Mathf.Floor(-angleLight / 2); angle < angleLight / 2; angle += 5)
+        {
+            Quaternion rotation = Quaternion.Euler(0, 0, angle + transform.rotation.eulerAngles.z);
+            Vector3 direction = rotation * Vector3.up;
+            Ray ray = new(Lamp.transform.position, direction);
+            RaycastHit2D[] hit = Physics2D.RaycastAll(ray.origin, direction, rangeLight);
+
+            Debug.DrawRay(Lamp.transform.position, direction * rangeLight, Color.red);
+            for (var i = 0; i < hit.Length; i++)
+            {
+                Debug.Log(hit[i].collider.gameObject);
+                if (hit[i].collider.gameObject.CompareTag("Enemy"))
+                {
+                    Debug.Log("Enemy!");
+                    //GameManager.Instance.enemiesKilled++;
+                    Destroy(hit[i].collider.gameObject);
+                }
+            }
+        }
     }
 
     private IEnumerator GrowLuminance()
