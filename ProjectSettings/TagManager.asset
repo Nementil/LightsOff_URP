@@ -4,17 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - Instantiated Enemies
-  - Enemy
-  - Instantiated Items
-  - Wall
-=======
   - Enemy
   - Coin
   - Instantiated Enemies
   - MonsterScream
->>>>>>> Stashed changes
+  - Wall
   layers:
   - Default
   - TransparentFX
