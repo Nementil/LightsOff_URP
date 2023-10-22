@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
     enum AI_State
     {
         Search,
-        MoveToPlayer
+        MoveToPlayer,
+        PlayerCollision
     }
 }

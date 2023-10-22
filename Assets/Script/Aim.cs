@@ -44,7 +44,6 @@ public class Aim : MonoBehaviour
             Debug.DrawRay(Lamp.transform.position, direction * 7, Color.red);
             for (var i=0;i<hit.Length;i++)
             {
-                Debug.Log(hit[i].collider.name);
                 if(hit[i].collider.gameObject.CompareTag("Enemy"))
                 {
                     Debug.Log("Enemy!");

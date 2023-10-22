@@ -9,4 +9,5 @@ public class SO_Enemy1 : ScriptableObject
     public int rangeLook;
     public float speed;
     public int treshold;
+    public List<SO_Items> lootTable;
 }

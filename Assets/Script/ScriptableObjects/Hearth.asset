@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb78bd0053779a34e97751b26bcd4b92, type: 3}
-  m_Name: Enemy1
+  m_Script: {fileID: 11500000, guid: 077c572cfabfb054c80a644a867e97bb, type: 3}
+  m_Name: Hearth
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  rangeLook: 5
-  speed: 2
-  treshold: 1
-  lootTable:
-  - {fileID: 11400000, guid: 3d3fd2e4f355bba4989e2002b4e8a3d9, type: 2}
+  dropRate: 25
+  item: {fileID: 5079696302655559881, guid: af1e25e61428f5b4890b9f666a0ba205, type: 3}
