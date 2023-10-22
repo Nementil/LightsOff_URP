@@ -163,6 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  rangeLight: 5
+  angleLight: 90
+  Lamp: {fileID: 0}
 --- !u!212 &8717938970011542421
 SpriteRenderer:
   m_ObjectHideFlags: 0
