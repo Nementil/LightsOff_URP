@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager _instance;
     public static GameManager Instance=> _instance;
     public GameManagerState State;
-    private int enemiesKilled;
+    public int enemiesKilled;
     private int timeInterval;
+    public bool doorUnlocked =false;
     [SerializeField] private GameObject player;
+
     private void Awake() 
     {
         if(_instance!=null && _instance !=this)
@@ -32,7 +34,28 @@ public class GameManager : MonoBehaviour
     {
         if(State==GameManagerState.init)
         {
-            
+            player = GameObject.FindWithTag("Player");
+            UpdateGameState(GameManagerState.loop);
+        }
+
+        if(State==GameManagerState.loop)
+        {
+            //if(player.GetComponent<Health>().hp=<0)
+            {
+              //  UpdateGameState(GameManagerState.end);
+            }
+            if(doorUnlocked)
+            {
+                UpdateGameState(GameManagerState.win);
+            }
+        }
+        if(State==GameManagerState.end)
+        {
+            //SHOW MESSAGE+SCORE ->BACK TO MENU
+        }
+        if(State==GameManagerState.win)
+        {
+            //CHANGE SCENE FROM ENUM/PREDEFINED ARRAY
         }
     }
 
@@ -56,6 +79,7 @@ public class GameManager : MonoBehaviour
     {
         init,
         loop,
-        end
+        end,
+        win
     }
 }

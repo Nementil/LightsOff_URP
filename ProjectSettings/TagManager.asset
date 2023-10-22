@@ -3,16 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - camera
-  - Enemy
-  - Coin
-  - ColissionTag
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Post Processing
+  - 
   - Water
   - UI
   - 
