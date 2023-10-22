@@ -3979,6 +3979,11 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: -2.4805312, y: -0.25909686, z: 0}
     m_Extent: {x: 4.5803742, y: 3.8007662, z: 0}
+--- !u!1 &1936268059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2560147535188509711, guid: 478dd4374bc24ae44a342b7f1ebd0195, type: 3}
+  m_PrefabInstance: {fileID: 6791025432681841595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2108745504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4282,6 +4287,8 @@ MonoBehaviour:
   cooldown: 0
   enemyList:
   - {fileID: 11400000, guid: 5be80f598521e704b8b4516c517eb048, type: 2}
+  container: {fileID: 1936268059}
+  prefab: {fileID: 4444931537408290500, guid: 626e22fd5ea921449a823f0320d51943, type: 3}
 --- !u!1001 &3140445820615688621
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,5 +17,4 @@ MonoBehaviour:
   speed: 2
   treshold: 1
   lootTable:
-  - {fileID: 11400000, guid: 3d3fd2e4f355bba4989e2002b4e8a3d9, type: 2}
   - {fileID: 11400000, guid: 46055085d21aff848b97356ecfa5acad, type: 2}

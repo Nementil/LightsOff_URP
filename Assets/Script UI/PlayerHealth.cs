@@ -33,10 +33,14 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth; // Full Player health 
     }
 
-
-    public void TakeDamage(float damage){
+    private void Update()
+    {
+        currentHealth = Mathf.Clamp(currentHealth, 0f, startingHealth);
         
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
+    }
+    public void TakeDamage(float damage){
+
+        currentHealth -= damage;
         if(currentHealth > 0){
             
             //IFrames
@@ -51,15 +55,6 @@ public class PlayerHealth : MonoBehaviour
                 if(uiManager != null)
                     uiManager.GameOver();
             }  
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            TakeDamage(1);
         }
     }
 
