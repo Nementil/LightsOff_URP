@@ -3135,6 +3135,29 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &926434501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174025673100011439, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
+  m_PrefabInstance: {fileID: 2108745504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &926434511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926434501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67feed4c8ab8c55488b14cd2dc61e600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Luminance: 0
+  rangeLight: 5
+  angleLight: 90
+  Lamp: {fileID: 0}
+  growthRate: 1
+  LuminanceMax: 10
 --- !u!1001 &1432216353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3394,7 +3417,7 @@ GameObject:
   - component: {fileID: 1732569299}
   m_Layer: 0
   m_Name: Layer2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3964,6 +3987,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1711736286}
+    - target: {fileID: 4458920025534798131, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9218774544286218305, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4007,7 +4034,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3174025673100011439, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 926434511}
   m_SourcePrefab: {fileID: 100100000, guid: c15955e9874111142a6e2a9d0bca4489, type: 3}
 --- !u!1001 &18489406038560607
 PrefabInstance:
