@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Instantiated Enemies
+  - Enemy
+  - Instantiated Items
+  - Wall
   layers:
   - Default
   - TransparentFX
