@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
         foreach(var item in enemy.lootTable)
         {
             int randomNumber = Random.Range(0, 100);
-            Debug.Log($"Val:{randomNumber} vs {item.dropRate}");
+            //Debug.Log($"Val:{randomNumber} vs {item.dropRate}");
             if(item.dropRate>randomNumber)
             {
                 Instantiate(item.item, transform.position, Quaternion.identity, container.transform);
