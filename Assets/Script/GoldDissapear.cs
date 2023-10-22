@@ -26,8 +26,8 @@ public class GoldDissapear : MonoBehaviour
             audioPlayer.Play();
             other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
-
         }
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
