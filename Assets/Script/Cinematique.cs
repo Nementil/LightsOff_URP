@@ -25,6 +25,7 @@ public class Cinematique : MonoBehaviour
         if(Input.GetKey("space"))
         {
             GetComponent<AudioSource>().Stop();
+            GameManager._instance.cutscene_active = false;
             cinematiques[0].SetActive(false);
             cinematiques[1].SetActive(false);
             cinematiques[2].SetActive(false);
