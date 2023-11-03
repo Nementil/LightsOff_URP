@@ -5,7 +5,8 @@ using UnityEngine;
 public class Cinematique : MonoBehaviour
 {
     [SerializeField] public List<GameObject> cinematiques;
-    float temps =3f;
+    [SerializeField] public float temps =3f;
+    private float compteur_temps;
     int counter=0;
 
     void Awake()
@@ -20,9 +21,23 @@ public class Cinematique : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(temps>0)
+        if(Input.GetKey("space"))
         {
-            temps -= Time.deltaTime;
+            GetComponent<AudioSource>().Stop();
+            cinematiques[0].SetActive(false);
+            cinematiques[1].SetActive(false);
+            cinematiques[2].SetActive(false);
+            cinematiques[3].SetActive(false);
+            gameObject.SetActive(false);
+        }
+        if(compteur_temps>0)
+        {
+            compteur_temps -= Time.deltaTime;
+        }
+        else if (counter == 4)
+        {
+            //Time.timeScale = 1;
+            gameObject.SetActive(false);
         }
         else
         {
@@ -32,12 +47,8 @@ public class Cinematique : MonoBehaviour
             cinematiques[2].SetActive(false);
             cinematiques[3].SetActive(false);
             cinematiques[counter].SetActive(true);
-            temps = 3;
+            compteur_temps = temps;
         }
-        if (counter == 4)
-        {
-            //Time.timeScale = 1;
-            this.gameObject.SetActive(false);
-        }
+
     }
 }

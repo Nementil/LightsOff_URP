@@ -23,6 +23,7 @@ public class GameManagerUI : MonoBehaviour
         }
         else
         {
+            Debug.Log("Duplicate UI:Destroy");
             Destroy(gameObject); 
         }
     }
