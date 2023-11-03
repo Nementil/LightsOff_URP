@@ -10,6 +10,8 @@ TagManager:
   - MonsterScream
   - Wall
   - UIManager
+  - GameManager
+  - AudioManager
   layers:
   - Default
   - TransparentFX

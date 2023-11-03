@@ -114,7 +114,7 @@ public class shootFlash : MonoBehaviour
             float t = 1 - ((endTime - Time.time) / growthRate); // Calculate a normalized time value from 0 to 1
             Luminance = Mathf.Lerp(startValue, LuminanceMax, t * t); // Apply an ease-in function (t * t for simplicity)
 
-            Debug.Log(Luminance);
+            //Debug.Log(Luminance);
 
             yield return null;
         }
