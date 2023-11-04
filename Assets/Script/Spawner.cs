@@ -23,8 +23,8 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            //if (GameManager._instance.enemiesInstantiated < GameManager._instance.maxEnemies)
-            Debug.Log("hello");
+            if (GameManager._instance.enemiesInstantiated < GameManager._instance.maxEnemies)
+            //Debug.Log("hello");
             {
                 GameObject Enemy=Instantiate(prefab,transform.position,Quaternion.identity,container.transform);
                 prefab.GetComponent<Enemy>().enemy=enemyList[Random.Range(0, enemyList.Count)];

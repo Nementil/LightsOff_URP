@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
     public bool doorUnlocked = false;
     public bool cutscene_active;
     private int timeInterval;
-    [SerializeField] private AudioManager audioInstance;
     [SerializeField] public int maxEnemies;
-    [SerializeField] private GameObject player;
     [SerializeField] public GameObject audioManager; 
+    [SerializeField] private GameObject player;
+    [SerializeField] private AudioManager audioInstance;
 
     private void Awake() 
     {
@@ -31,13 +31,14 @@ public class GameManager : MonoBehaviour
         if(audioManager==null)
         {
             audioManager = GameObject.FindWithTag("AudioManager");
-            audioInstance = AudioManager._instance;
+            audioInstance = audioManager.GetComponent<AudioManager>();
         }
         if (player == null) 
         { 
             player = GameObject.FindWithTag("Player");
             player.GetComponent<PlayerMovement2>().enabled=false;
         }
+        enemiesInstantiated =0;
     }
 
     private void Start() 

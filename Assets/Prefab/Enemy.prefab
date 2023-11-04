@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 5be80f598521e704b8b4516c517eb048, type: 2}
-  container: {fileID: 0}
+  container: {fileID: 4296829411263647445, guid: 2708b2d10db27c3439f4528600e3f76a, type: 3}
 --- !u!195 &5654416633515257410
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4685081669489607971}
   - component: {fileID: 4140860871736333112}
   - component: {fileID: 2491888955582754019}
+  - component: {fileID: 4560606142097118058}
   m_Layer: 0
   m_Name: lightA02
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: ad339aa190bf36044aabbaad3c69d047, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,6 +154,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53422296, y: 0.29718137}
   m_EdgeRadius: 0
+--- !u!114 &4560606142097118058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7634771209320108557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7731819819702228798
 GameObject:
   m_ObjectHideFlags: 0
