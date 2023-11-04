@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891b885bb0370ce4a945e52df0d2d425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown_val: 0
-  cooldown: 0
-  enemyList: []
+  cooldown_val: 3
+  range: 15
+  rangeMinimum: 6
+  enemyList_prefab:
+  - {fileID: 3390166744578629725, guid: bb2e9f7f3b6e7f3469141fac8039f10f, type: 3}
+  - {fileID: 1854763071583729918, guid: efea298a92a90fa43bdbac6345104cb1, type: 3}
+  - {fileID: 3711621061860994469, guid: faf6e26bb885cf145ad17f8326030ea6, type: 3}
   container: {fileID: 0}
-  prefab: {fileID: 0}

@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
                 Instantiate(item.item, transform.position, Quaternion.identity, container.transform);
                 break;
             }
-            
+            GameManager._instance.enemiesInstantiated--;
         }
     }
 }

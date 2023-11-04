@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using UnityEngine;
 
@@ -13,10 +11,12 @@ public class GameManager : MonoBehaviour
     public bool doorUnlocked = false;
     public bool cutscene_active;
     private int timeInterval;
+    private AudioManager audioInstance;
     [SerializeField] public int maxEnemies;
     [SerializeField] public GameObject audioManager; 
+    [SerializeField] public GameObject containerSpawner;
+    [SerializeField] public GameObject containerPresentEnemies;
     [SerializeField] private GameObject player;
-    [SerializeField] private AudioManager audioInstance;
 
     private void Awake() 
     {
@@ -38,13 +38,14 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindWithTag("Player");
             player.GetComponent<PlayerMovement2>().enabled=false;
         }
-        enemiesInstantiated =0;
+        enemiesInstantiated =containerPresentEnemies.transform.childCount;
     }
 
     private void Start() 
     {
         UpdateGameState(GameManagerState.cutscene);
     }
+   
 
     private void Update() 
     {
