@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: ShadowBox_Left
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: 1814255400, guid: 068af274895c5a34b925ad44e52ec015, type: 3}
+  m_DefaultGameObject: {fileID: 2906201091238969135, guid: b27519eca1952bb43897d0712cf1c355, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules: []
