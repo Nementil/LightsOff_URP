@@ -31,7 +31,7 @@ public class PlayerKeyHolder : MonoBehaviour
     public void KeyCounter(float singleKey){
         
         currentAmountKey = Mathf.Clamp(currentAmountKey + singleKey, startingAmountKey, maxAmountKey);
- 
+        Debug.Log("Current amount of keys: "+currentAmountKey);
         if(currentAmountKey == maxAmountKey)   
         {
         
