@@ -14,9 +14,12 @@ public class Items : MonoBehaviour
             Debug.Log("Item Collided");
             if(item.item.name=="Hearth")
             {
-                collision.gameObject.GetComponent<PlayerHealth>().currentHealth++;
+                if (collision.gameObject.GetComponent<PlayerHealth>().currentHealth<5) 
+                {
+                    collision.gameObject.GetComponent<PlayerHealth>().currentHealth++;
+                    Destroy(this.gameObject);
+                }
             }
-            Destroy(this.gameObject);
         }
     }
     

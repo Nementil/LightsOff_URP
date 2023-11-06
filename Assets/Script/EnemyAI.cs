@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.enabled = true;
+        agent.speed = enemy.speed;
         currentState = AI_State.Search;
         cooldown = cooldown_val;
     }
@@ -45,7 +46,7 @@ public class EnemyAI : MonoBehaviour
             {
                 Debug.Log("NOT on cd");
                 cooldown = cooldown_val;
-                agent.speed = 3.5f;
+                agent.speed = enemy.speed;
 
                 currentState = AI_State.MoveToPlayer;
             }

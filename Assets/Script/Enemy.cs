@@ -6,9 +6,11 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] public SO_Enemy1 enemy;
     [SerializeField] public GameObject container;
+    
     private void Awake()
     {
         container = GameObject.FindWithTag("Instantiated Enemies");
+        
     }
     private void OnDestroy()
     {
